@@ -1,0 +1,214 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/adityagupta/Google Drive/ANDROID PROJECTS/OCR/app/src/main/AndroidManifest.xml:2:1-35:12
+INJECTED from /Users/adityagupta/Google Drive/ANDROID PROJECTS/OCR/app/src/main/AndroidManifest.xml:2:1-35:12
+INJECTED from /Users/adityagupta/Google Drive/ANDROID PROJECTS/OCR/app/src/main/AndroidManifest.xml:2:1-35:12
+INJECTED from /Users/adityagupta/Google Drive/ANDROID PROJECTS/OCR/app/src/main/AndroidManifest.xml:2:1-35:12
+MERGED from [com.android.support:design:27.1.1] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/276bea672cf2b411d77631d0cf1e5de0/AndroidManifest.xml:17:1-22:12
+MERGED from [uk.co.chrisjenx:calligraphy:2.3.0] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/calligraphy-2.3.0.aar/34d9b775d12b4d911d11bbb88ca3b04e/AndroidManifest.xml:2:1-13:12
+MERGED from [com.android.support:appcompat-v7:27.1.1] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/d7faa5c2867be72ac564ad422c55c0be/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.0] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.0.aar/aa3cc5df9b7e8f5c35320d30dad38b39/AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:cardview-v7:27.1.1] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/cardview-v7-27.1.1.aar/1d188cfeba6d0d23b345674c67ac20d8/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.gms:play-services-vision:15.0.2] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/play-services-vision-15.0.2.aar/e9f18834d12e87aaf5f2690ed2d7f39d/AndroidManifest.xml:2:1-9:12
+MERGED from [com.android.support:recyclerview-v7:27.1.1] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.1.1.aar/93d06f13efbcd61a2c23c5956d0f0df9/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:transition:27.1.1] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/transition-27.1.1.aar/98af4341e75036bc72754a9ebce0c01a/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.gms:play-services-vision-common:15.0.2] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/play-services-vision-common-15.0.2.aar/42ce01e51e7b20de00af75678f8eff8f/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-clearcut:15.0.1] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/play-services-clearcut-15.0.1.aar/e4bc2aacf0ff9caa14359a16e94aead0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-flags:15.0.1] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/play-services-flags-15.0.1.aar/928f8f26d7f022ef86bdd276d663a7f4/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.gms:play-services-phenotype:15.0.1] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/play-services-phenotype-15.0.1.aar/d72cf83264aca4e1a286099961229184/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-base:15.0.1] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/e9a1d608f6213b46492bc4e6e1c2a74c/AndroidManifest.xml:17:1-29:12
+MERGED from [com.google.android.gms:play-services-tasks:15.0.1] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/play-services-tasks-15.0.1.aar/68256cdcf814fa4c0a36baf7d026548e/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-basement:15.0.1] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/66356189ec9134db7151816afcfa4b14/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-v4:27.1.1] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/support-v4-27.1.1.aar/b91c885665aaec5eb03107e8eac32e0f/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:27.1.1] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/4c7e2c956a0762d899d6b4042e9196b4/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/2a0a60c38776f1b85aeca4776632a67d/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:27.1.1] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/19ee08bdbbe6d0b7c35a49a20c887306/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:27.1.1] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/df9c9568f165ab4732fd3de816288a55/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/62e7b2d4c6dac594caa11b346f242440/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-media-compat:27.1.1] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/4326c3cb655066eba28cf2cc0424315d/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:27.1.1] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/7e14844110a5de40a240aaa4f854ed72/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/957b9e06ef81a3895a7fc886c9442b57/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/bdf52277a2a89f3c452416b43ef6fb5b/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.0] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/2ee00b34742a600db93afbf66048a138/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/0447a2800bfd924dd5bb596b4a969e56/AndroidManifest.xml:17:1-22:12
+INJECTED from /Users/adityagupta/Google Drive/ANDROID PROJECTS/OCR/app/src/main/AndroidManifest.xml:2:1-35:12
+INJECTED from /Users/adityagupta/Google Drive/ANDROID PROJECTS/OCR/app/src/main/AndroidManifest.xml:2:1-35:12
+INJECTED from /Users/adityagupta/Google Drive/ANDROID PROJECTS/OCR/app/src/main/AndroidManifest.xml:2:1-35:12
+	package
+		ADDED from /Users/adityagupta/Google Drive/ANDROID PROJECTS/OCR/app/src/main/AndroidManifest.xml:3:5-48
+		INJECTED from /Users/adityagupta/Google Drive/ANDROID PROJECTS/OCR/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/adityagupta/Google Drive/ANDROID PROJECTS/OCR/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/adityagupta/Google Drive/ANDROID PROJECTS/OCR/app/src/main/AndroidManifest.xml
+		ADDED from /Users/adityagupta/Google Drive/ANDROID PROJECTS/OCR/app/src/main/AndroidManifest.xml:2:1-35:12
+		INJECTED from /Users/adityagupta/Google Drive/ANDROID PROJECTS/OCR/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /Users/adityagupta/Google Drive/ANDROID PROJECTS/OCR/app/src/main/AndroidManifest.xml
+		ADDED from /Users/adityagupta/Google Drive/ANDROID PROJECTS/OCR/app/src/main/AndroidManifest.xml:2:1-35:12
+		INJECTED from /Users/adityagupta/Google Drive/ANDROID PROJECTS/OCR/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/adityagupta/Google Drive/ANDROID PROJECTS/OCR/app/src/main/AndroidManifest.xml:2:11-69
+uses-permission#android.permission.INTERNET
+ADDED from /Users/adityagupta/Google Drive/ANDROID PROJECTS/OCR/app/src/main/AndroidManifest.xml:5:5-67
+	android:name
+		ADDED from /Users/adityagupta/Google Drive/ANDROID PROJECTS/OCR/app/src/main/AndroidManifest.xml:5:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from /Users/adityagupta/Google Drive/ANDROID PROJECTS/OCR/app/src/main/AndroidManifest.xml:6:5-79
+	android:name
+		ADDED from /Users/adityagupta/Google Drive/ANDROID PROJECTS/OCR/app/src/main/AndroidManifest.xml:6:22-76
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from /Users/adityagupta/Google Drive/ANDROID PROJECTS/OCR/app/src/main/AndroidManifest.xml:7:5-80
+	android:name
+		ADDED from /Users/adityagupta/Google Drive/ANDROID PROJECTS/OCR/app/src/main/AndroidManifest.xml:7:22-77
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /Users/adityagupta/Google Drive/ANDROID PROJECTS/OCR/app/src/main/AndroidManifest.xml:8:5-81
+	android:name
+		ADDED from /Users/adityagupta/Google Drive/ANDROID PROJECTS/OCR/app/src/main/AndroidManifest.xml:8:22-78
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from /Users/adityagupta/Google Drive/ANDROID PROJECTS/OCR/app/src/main/AndroidManifest.xml:9:5-79
+	android:name
+		ADDED from /Users/adityagupta/Google Drive/ANDROID PROJECTS/OCR/app/src/main/AndroidManifest.xml:9:22-76
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from /Users/adityagupta/Google Drive/ANDROID PROJECTS/OCR/app/src/main/AndroidManifest.xml:10:5-81
+	android:name
+		ADDED from /Users/adityagupta/Google Drive/ANDROID PROJECTS/OCR/app/src/main/AndroidManifest.xml:10:22-78
+meta-data#com.google.android.gms.vision.DEPENDENCIES
+ADDED from /Users/adityagupta/Google Drive/ANDROID PROJECTS/OCR/app/src/main/AndroidManifest.xml:12:5-14:31
+	android:value
+		ADDED from /Users/adityagupta/Google Drive/ANDROID PROJECTS/OCR/app/src/main/AndroidManifest.xml:14:9-28
+	android:name
+		ADDED from /Users/adityagupta/Google Drive/ANDROID PROJECTS/OCR/app/src/main/AndroidManifest.xml:13:9-66
+application
+ADDED from /Users/adityagupta/Google Drive/ANDROID PROJECTS/OCR/app/src/main/AndroidManifest.xml:16:5-33:19
+MERGED from [uk.co.chrisjenx:calligraphy:2.3.0] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/calligraphy-2.3.0.aar/34d9b775d12b4d911d11bbb88ca3b04e/AndroidManifest.xml:11:5-20
+MERGED from [uk.co.chrisjenx:calligraphy:2.3.0] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/calligraphy-2.3.0.aar/34d9b775d12b4d911d11bbb88ca3b04e/AndroidManifest.xml:11:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.0] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.0.aar/aa3cc5df9b7e8f5c35320d30dad38b39/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.0] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.0.aar/aa3cc5df9b7e8f5c35320d30dad38b39/AndroidManifest.xml:9:5-20
+MERGED from [com.google.android.gms:play-services-vision:15.0.2] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/play-services-vision-15.0.2.aar/e9f18834d12e87aaf5f2690ed2d7f39d/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-vision:15.0.2] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/play-services-vision-15.0.2.aar/e9f18834d12e87aaf5f2690ed2d7f39d/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-vision-common:15.0.2] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/play-services-vision-common-15.0.2.aar/42ce01e51e7b20de00af75678f8eff8f/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-vision-common:15.0.2] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/play-services-vision-common-15.0.2.aar/42ce01e51e7b20de00af75678f8eff8f/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-clearcut:15.0.1] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/play-services-clearcut-15.0.1.aar/e4bc2aacf0ff9caa14359a16e94aead0/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-clearcut:15.0.1] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/play-services-clearcut-15.0.1.aar/e4bc2aacf0ff9caa14359a16e94aead0/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-phenotype:15.0.1] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/play-services-phenotype-15.0.1.aar/d72cf83264aca4e1a286099961229184/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-phenotype:15.0.1] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/play-services-phenotype-15.0.1.aar/d72cf83264aca4e1a286099961229184/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-base:15.0.1] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/e9a1d608f6213b46492bc4e6e1c2a74c/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-base:15.0.1] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/e9a1d608f6213b46492bc4e6e1c2a74c/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-tasks:15.0.1] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/play-services-tasks-15.0.1.aar/68256cdcf814fa4c0a36baf7d026548e/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-tasks:15.0.1] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/play-services-tasks-15.0.1.aar/68256cdcf814fa4c0a36baf7d026548e/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-basement:15.0.1] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/66356189ec9134db7151816afcfa4b14/AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-basement:15.0.1] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/66356189ec9134db7151816afcfa4b14/AndroidManifest.xml:22:5-26:19
+	android:supportsRtl
+		ADDED from /Users/adityagupta/Google Drive/ANDROID PROJECTS/OCR/app/src/main/AndroidManifest.xml:22:9-35
+	android:label
+		ADDED from /Users/adityagupta/Google Drive/ANDROID PROJECTS/OCR/app/src/main/AndroidManifest.xml:20:9-41
+	android:roundIcon
+		ADDED from /Users/adityagupta/Google Drive/ANDROID PROJECTS/OCR/app/src/main/AndroidManifest.xml:21:9-54
+	android:icon
+		ADDED from /Users/adityagupta/Google Drive/ANDROID PROJECTS/OCR/app/src/main/AndroidManifest.xml:19:9-43
+	android:allowBackup
+		ADDED from /Users/adityagupta/Google Drive/ANDROID PROJECTS/OCR/app/src/main/AndroidManifest.xml:18:9-35
+	android:theme
+		ADDED from /Users/adityagupta/Google Drive/ANDROID PROJECTS/OCR/app/src/main/AndroidManifest.xml:23:9-40
+	android:name
+		ADDED from /Users/adityagupta/Google Drive/ANDROID PROJECTS/OCR/app/src/main/AndroidManifest.xml:17:9-56
+activity#aditya.rupal.translate.orcandtext.DrawerActivity
+ADDED from /Users/adityagupta/Google Drive/ANDROID PROJECTS/OCR/app/src/main/AndroidManifest.xml:24:9-32:40
+	android:label
+		ADDED from /Users/adityagupta/Google Drive/ANDROID PROJECTS/OCR/app/src/main/AndroidManifest.xml:26:13-58
+	android:theme
+		ADDED from /Users/adityagupta/Google Drive/ANDROID PROJECTS/OCR/app/src/main/AndroidManifest.xml:27:13-44
+	android:name
+		ADDED from /Users/adityagupta/Google Drive/ANDROID PROJECTS/OCR/app/src/main/AndroidManifest.xml:25:13-43
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/adityagupta/Google Drive/ANDROID PROJECTS/OCR/app/src/main/AndroidManifest.xml:28:13-32:29
+action#android.intent.action.MAIN
+ADDED from /Users/adityagupta/Google Drive/ANDROID PROJECTS/OCR/app/src/main/AndroidManifest.xml:29:17-69
+	android:name
+		ADDED from /Users/adityagupta/Google Drive/ANDROID PROJECTS/OCR/app/src/main/AndroidManifest.xml:29:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/adityagupta/Google Drive/ANDROID PROJECTS/OCR/app/src/main/AndroidManifest.xml:31:17-77
+	android:name
+		ADDED from /Users/adityagupta/Google Drive/ANDROID PROJECTS/OCR/app/src/main/AndroidManifest.xml:31:27-74
+uses-sdk
+INJECTED from /Users/adityagupta/Google Drive/ANDROID PROJECTS/OCR/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/adityagupta/Google Drive/ANDROID PROJECTS/OCR/app/src/main/AndroidManifest.xml
+INJECTED from /Users/adityagupta/Google Drive/ANDROID PROJECTS/OCR/app/src/main/AndroidManifest.xml
+MERGED from [com.android.support:design:27.1.1] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/276bea672cf2b411d77631d0cf1e5de0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:27.1.1] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/276bea672cf2b411d77631d0cf1e5de0/AndroidManifest.xml:20:5-44
+MERGED from [uk.co.chrisjenx:calligraphy:2.3.0] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/calligraphy-2.3.0.aar/34d9b775d12b4d911d11bbb88ca3b04e/AndroidManifest.xml:7:5-9:41
+MERGED from [uk.co.chrisjenx:calligraphy:2.3.0] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/calligraphy-2.3.0.aar/34d9b775d12b4d911d11bbb88ca3b04e/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:appcompat-v7:27.1.1] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/d7faa5c2867be72ac564ad422c55c0be/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.1.1] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/d7faa5c2867be72ac564ad422c55c0be/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.1.0] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.0.aar/aa3cc5df9b7e8f5c35320d30dad38b39/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.0] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.0.aar/aa3cc5df9b7e8f5c35320d30dad38b39/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:cardview-v7:27.1.1] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/cardview-v7-27.1.1.aar/1d188cfeba6d0d23b345674c67ac20d8/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:27.1.1] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/cardview-v7-27.1.1.aar/1d188cfeba6d0d23b345674c67ac20d8/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-vision:15.0.2] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/play-services-vision-15.0.2.aar/e9f18834d12e87aaf5f2690ed2d7f39d/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-vision:15.0.2] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/play-services-vision-15.0.2.aar/e9f18834d12e87aaf5f2690ed2d7f39d/AndroidManifest.xml:5:5-44
+MERGED from [com.android.support:recyclerview-v7:27.1.1] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.1.1.aar/93d06f13efbcd61a2c23c5956d0f0df9/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:27.1.1] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.1.1.aar/93d06f13efbcd61a2c23c5956d0f0df9/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:27.1.1] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/transition-27.1.1.aar/98af4341e75036bc72754a9ebce0c01a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:27.1.1] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/transition-27.1.1.aar/98af4341e75036bc72754a9ebce0c01a/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-vision-common:15.0.2] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/play-services-vision-common-15.0.2.aar/42ce01e51e7b20de00af75678f8eff8f/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-vision-common:15.0.2] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/play-services-vision-common-15.0.2.aar/42ce01e51e7b20de00af75678f8eff8f/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-clearcut:15.0.1] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/play-services-clearcut-15.0.1.aar/e4bc2aacf0ff9caa14359a16e94aead0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-clearcut:15.0.1] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/play-services-clearcut-15.0.1.aar/e4bc2aacf0ff9caa14359a16e94aead0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-flags:15.0.1] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/play-services-flags-15.0.1.aar/928f8f26d7f022ef86bdd276d663a7f4/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-flags:15.0.1] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/play-services-flags-15.0.1.aar/928f8f26d7f022ef86bdd276d663a7f4/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-phenotype:15.0.1] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/play-services-phenotype-15.0.1.aar/d72cf83264aca4e1a286099961229184/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-phenotype:15.0.1] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/play-services-phenotype-15.0.1.aar/d72cf83264aca4e1a286099961229184/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:15.0.1] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/e9a1d608f6213b46492bc4e6e1c2a74c/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:15.0.1] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/e9a1d608f6213b46492bc4e6e1c2a74c/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-tasks:15.0.1] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/play-services-tasks-15.0.1.aar/68256cdcf814fa4c0a36baf7d026548e/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:15.0.1] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/play-services-tasks-15.0.1.aar/68256cdcf814fa4c0a36baf7d026548e/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-basement:15.0.1] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/66356189ec9134db7151816afcfa4b14/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:15.0.1] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/66356189ec9134db7151816afcfa4b14/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.1.1] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/support-v4-27.1.1.aar/b91c885665aaec5eb03107e8eac32e0f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.1.1] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/support-v4-27.1.1.aar/b91c885665aaec5eb03107e8eac32e0f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/4c7e2c956a0762d899d6b4042e9196b4/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/4c7e2c956a0762d899d6b4042e9196b4/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/2a0a60c38776f1b85aeca4776632a67d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/2a0a60c38776f1b85aeca4776632a67d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/19ee08bdbbe6d0b7c35a49a20c887306/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/19ee08bdbbe6d0b7c35a49a20c887306/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/df9c9568f165ab4732fd3de816288a55/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/df9c9568f165ab4732fd3de816288a55/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/62e7b2d4c6dac594caa11b346f242440/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/62e7b2d4c6dac594caa11b346f242440/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/4326c3cb655066eba28cf2cc0424315d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/4326c3cb655066eba28cf2cc0424315d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/7e14844110a5de40a240aaa4f854ed72/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/7e14844110a5de40a240aaa4f854ed72/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/957b9e06ef81a3895a7fc886c9442b57/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/957b9e06ef81a3895a7fc886c9442b57/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/bdf52277a2a89f3c452416b43ef6fb5b/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/bdf52277a2a89f3c452416b43ef6fb5b/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/2ee00b34742a600db93afbf66048a138/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/2ee00b34742a600db93afbf66048a138/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/0447a2800bfd924dd5bb596b4a969e56/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/0447a2800bfd924dd5bb596b4a969e56/AndroidManifest.xml:20:5-44
+INJECTED from /Users/adityagupta/Google Drive/ANDROID PROJECTS/OCR/app/src/main/AndroidManifest.xml
+INJECTED from /Users/adityagupta/Google Drive/ANDROID PROJECTS/OCR/app/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Users/adityagupta/Google Drive/ANDROID PROJECTS/OCR/app/src/main/AndroidManifest.xml
+		ADDED from /Users/adityagupta/Google Drive/ANDROID PROJECTS/OCR/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/adityagupta/Google Drive/ANDROID PROJECTS/OCR/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/adityagupta/Google Drive/ANDROID PROJECTS/OCR/app/src/main/AndroidManifest.xml
+		ADDED from /Users/adityagupta/Google Drive/ANDROID PROJECTS/OCR/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/adityagupta/Google Drive/ANDROID PROJECTS/OCR/app/src/main/AndroidManifest.xml
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:15.0.1] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/e9a1d608f6213b46492bc4e6e1c2a74c/AndroidManifest.xml:23:9-26:75
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:15.0.1] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/e9a1d608f6213b46492bc4e6e1c2a74c/AndroidManifest.xml:25:13-37
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:15.0.1] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/e9a1d608f6213b46492bc4e6e1c2a74c/AndroidManifest.xml:26:13-72
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:15.0.1] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/e9a1d608f6213b46492bc4e6e1c2a74c/AndroidManifest.xml:24:13-79
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:15.0.1] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/66356189ec9134db7151816afcfa4b14/AndroidManifest.xml:23:9-25:69
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:15.0.1] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/66356189ec9134db7151816afcfa4b14/AndroidManifest.xml:25:13-66
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:15.0.1] /Users/adityagupta/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/66356189ec9134db7151816afcfa4b14/AndroidManifest.xml:24:13-58
