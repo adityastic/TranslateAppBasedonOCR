@@ -39,10 +39,17 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.gms.vision.Frame;
 import com.google.android.gms.vision.text.Text;
 import com.google.android.gms.vision.text.TextBlock;
 import com.google.android.gms.vision.text.TextRecognizer;
+import com.google.firebase.ml.vision.FirebaseVision;
+import com.google.firebase.ml.vision.common.FirebaseVisionImage;
+import com.google.firebase.ml.vision.text.FirebaseVisionText;
+import com.google.firebase.ml.vision.text.FirebaseVisionTextDetector;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -58,6 +65,7 @@ import java.util.List;
 import java.util.Map;
 
 import aditya.rupal.translate.orcandtext.adapter.TranslationRecyclerAdapter;
+import aditya.rupal.translate.orcandtext.data.SortText;
 import aditya.rupal.translate.orcandtext.data.TranslationData;
 import aditya.rupal.translate.orcandtext.utils.ImageUtils;
 
@@ -78,7 +86,7 @@ public class DrawerActivity extends AppCompatActivity
     RequestQueue requestQueue;
     ArrayList<TranslationData> result;
 
-    LinearLayout fragOCR,fragTrans;
+    LinearLayout fragOCR, fragTrans;
 
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
@@ -96,91 +104,74 @@ public class DrawerActivity extends AppCompatActivity
 
             ((ImageView) findViewById(R.id.img)).setImageBitmap(imageBitmap);
 
-            TextRecognizer textRecognizer = new TextRecognizer.Builder(this).build();
-
-            if (!textRecognizer.isOperational()) {
-                IntentFilter lowstorageFilter = new IntentFilter(Intent.ACTION_DEVICE_STORAGE_LOW);
-                boolean hasLowStorage = registerReceiver(null, lowstorageFilter) != null;
-
-                if (hasLowStorage) {
-                    Toast.makeText(this, "Low Storage", Toast.LENGTH_LONG).show();
-                }
-            }
-
-            Frame imageFrame = new Frame.Builder()
-                    .setBitmap(imageBitmap)
-                    .build();
-
-            SparseArray<TextBlock> textBlocks = textRecognizer.detect(imageFrame);
-
-            List<Text> textLines = new ArrayList<>();
-
-            for (int i = 0; i < textBlocks.size(); i++) {
-                TextBlock textBlock = textBlocks.valueAt(i);
-
-                List<? extends Text> textComponents = textBlock.getComponents();
-                textLines.addAll(textComponents);
-
-            }
-
-            com = 0;
-            Collections.sort(textLines, new Comparator<Text>() {
+            FirebaseVisionTextDetector textRecognizer = FirebaseVision.getInstance().getVisionTextDetector();
+            FirebaseVisionImage fn = FirebaseVisionImage.fromBitmap(imageBitmap);
+            Task<FirebaseVisionText> fvresult = textRecognizer.detectInImage(fn).addOnSuccessListener(new OnSuccessListener<FirebaseVisionText>() {
                 @Override
-                public int compare(Text t1, Text t2) {
-                    int topDiff = t1.getBoundingBox().top - t2.getBoundingBox().top;
-                    int leftDiff = t1.getBoundingBox().left - t2.getBoundingBox().left;
+                public void onSuccess(FirebaseVisionText results) {
+                    List<FirebaseVisionText.Block> block = results.getBlocks();
 
-                    Log.e("TextBlock" + com, t1.getValue() + " = " + t1.getBoundingBox().top + "," + t1.getBoundingBox().bottom + "," + t1.getBoundingBox().left + "," + t1.getBoundingBox().right);
-                    Log.e("TextBlock" + com, t2.getValue() + " = " + t2.getBoundingBox().top + "," + t2.getBoundingBox().bottom + "," + t2.getBoundingBox().left + "," + t2.getBoundingBox().right);
+                    Log.e("Request Recieved", "YES");
+                    SortText sortText = new SortText();
 
-                    com++;
-                    if (topDiff != 0) {
-                        return topDiff;
+                    for (int i = 0; i < block.size(); i++) {
+                        List<FirebaseVisionText.Line> lines = block.get(i).getLines();
+                        for (int j = 0; j < lines.size(); j++) {
+                            sortText.add(lines.get(j));
+                        }
                     }
-                    return leftDiff;
-                }
-            });
 
-            result.clear();
-            ((LinearLayout) findViewById(R.id.resultLayout)).setVisibility(View.VISIBLE);
-            ((TextView) findViewById(R.id.imgselect)).setVisibility(GONE);
-            for (final Text text : textLines) {
-                if (text != null && text.getValue() != null) {
-                    TranslationData td = new TranslationData(text.getValue(), "");
-                    result.add(td);
+                    sortText.sort();
 
-                    JsonObjectRequest request = null;
-                    try {
-                        String origlink = String.format("https://script.google.com/macros/s/AKfycbwb8tHeko9lBq3l7xkm8Aa0qQVtXg9FJGH7tSDrDtyLDE98zAY/exec?q=%s&target=%s&id=%s", URLEncoder.encode(text.getValue(), "UTF-8"), languages.get(spinner.getSelectedItem().toString()), result.indexOf(td));
+                    result.clear();
+                    ((LinearLayout) findViewById(R.id.resultLayout)).setVisibility(View.VISIBLE);
+                    ((TextView) findViewById(R.id.imgselect)).setVisibility(GONE);
+                    for (aditya.rupal.translate.orcandtext.data.Text t : sortText.getAllText()) {
+                        String str = "";
+                        for (FirebaseVisionText.Line e : t.getText()) {
+                            str += e.getText() + " ";
+                        }
+                        TranslationData td = new TranslationData(str, "");
+                        result.add(td);
 
-                        request = new JsonObjectRequest(Request.Method.GET, origlink, null, new Response.Listener<JSONObject>() {
-                            @Override
-                            public void onResponse(JSONObject response) {
-                                try {
-                                    int id = Integer.parseInt(response.get("id").toString());
-                                    result.set(id, new TranslationData(result.get(id).original, response.get("translatedText").toString()));
-                                    mAdapter.notifyDataSetChanged();
-                                } catch (JSONException e) {
-                                    e.printStackTrace();
+                        JsonObjectRequest request = null;
+                        try {
+                            String origlink = String.format("https://script.google.com/macros/s/AKfycbwb8tHeko9lBq3l7xkm8Aa0qQVtXg9FJGH7tSDrDtyLDE98zAY/exec?q=%s&target=%s&id=%s", URLEncoder.encode(str, "UTF-8"), languages.get(spinner.getSelectedItem().toString()), result.indexOf(td));
+
+                            request = new JsonObjectRequest(Request.Method.GET, origlink, null, new Response.Listener<JSONObject>() {
+                                @Override
+                                public void onResponse(JSONObject response) {
+                                    try {
+                                        int id = Integer.parseInt(response.get("id").toString());
+                                        result.set(id, new TranslationData(result.get(id).original, response.get("translatedText").toString()));
+                                        mAdapter.notifyDataSetChanged();
+                                    } catch (JSONException e) {
+                                        e.printStackTrace();
+                                    }
                                 }
-                            }
-                        }, new Response.ErrorListener() {
-                            @Override
-                            public void onErrorResponse(VolleyError error) {
-                                Log.e("VolleyError", error.toString());
-                            }
-                        });
-                    } catch (UnsupportedEncodingException e) {
-                        e.printStackTrace();
+                            }, new Response.ErrorListener() {
+                                @Override
+                                public void onErrorResponse(VolleyError error) {
+                                    Log.e("VolleyError", error.toString());
+                                }
+                            });
+                        } catch (UnsupportedEncodingException e) {
+                            e.printStackTrace();
+                        }
+                        requestQueue.add(request);
                     }
-                    requestQueue.add(request);
+                    mAdapter.notifyDataSetChanged();
                 }
-            }
-
-            mAdapter.notifyDataSetChanged();
-
+            }).addOnFailureListener(
+                    new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+                            Log.e("Failed", "Yes");
+                        }
+                    });
         }
     }
+
 
     Toolbar mToolbar;
 
@@ -263,7 +254,7 @@ public class DrawerActivity extends AppCompatActivity
             public void onClick(View v) {
                 JsonObjectRequest request = null;
                 try {
-                    request = new JsonObjectRequest(Request.Method.GET, String.format("https://script.google.com/macros/s/AKfycbwb8tHeko9lBq3l7xkm8Aa0qQVtXg9FJGH7tSDrDtyLDE98zAY/exec?q=%s&target=%s&id=%s&source=%s", URLEncoder.encode(transQuery.getText().toString(), "UTF-8"), languages.get(lastSpinner.getSelectedItem().toString()), -1+"",languages.get(firstSpinner.getSelectedItem().toString())), null, new Response.Listener<JSONObject>() {
+                    request = new JsonObjectRequest(Request.Method.GET, String.format("https://script.google.com/macros/s/AKfycbwb8tHeko9lBq3l7xkm8Aa0qQVtXg9FJGH7tSDrDtyLDE98zAY/exec?q=%s&target=%s&id=%s&source=%s", URLEncoder.encode(transQuery.getText().toString(), "UTF-8"), languages.get(lastSpinner.getSelectedItem().toString()), -1 + "", languages.get(firstSpinner.getSelectedItem().toString())), null, new Response.Listener<JSONObject>() {
                         @Override
                         public void onResponse(JSONObject response) {
                             try {

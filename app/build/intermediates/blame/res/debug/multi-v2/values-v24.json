@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/adityagupta/Google Drive/ANDROID PROJECTS/OCR/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v24/values-v24.xml",
+            "outputFile": "/Users/adityagupta/AndroidWork/Development/TranslateAppBasedonOCR/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v24/values-v24.xml",
             "map": [
                 {
-                    "source": "/Users/adityagupta/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/4326c3cb655066eba28cf2cc0424315d/res/values-v24/values-v24.xml",
+                    "source": "/Users/adityagupta/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/5e449c3a3a04865d2b2ca7cd71ef5a74/res/values-v24/values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "/Users/adityagupta/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/d7faa5c2867be72ac564ad422c55c0be/res/values-v24/values-v24.xml",
+                    "source": "/Users/adityagupta/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0-alpha3.aar/0300bc9412b48d2e4515291d480fb078/res/values-v24/values-v24.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",
