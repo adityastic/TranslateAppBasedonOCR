@@ -6,6 +6,7 @@ git config --global user.email "adityaofficialgupta@gmail.com"
 git clone https://adityastic:$GITHUB_KEY@github.com/adityastic/AndroidAppReleases
 cd AndroidAppReleases
 
+rm -rf rans*
 rm -rf ${TRAVIS_REPO_SLUG#*/}*
 
 find ../app/build/outputs -type f -name '*.apk' -exec cp -v {} . \;
