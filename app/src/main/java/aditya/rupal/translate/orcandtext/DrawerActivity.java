@@ -35,12 +35,11 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.gms.tasks.Task;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.ml.vision.FirebaseVision;
 import com.google.firebase.ml.vision.common.FirebaseVisionImage;
 import com.google.firebase.ml.vision.text.FirebaseVisionText;
-import com.google.firebase.ml.vision.text.FirebaseVisionTextDetector;
+import com.google.firebase.ml.vision.text.FirebaseVisionTextRecognizer;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -53,6 +52,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 
 import aditya.rupal.translate.orcandtext.adapter.TranslationRecyclerAdapter;
 import aditya.rupal.translate.orcandtext.data.SortText;
@@ -70,9 +70,6 @@ public class DrawerActivity extends AppCompatActivity
     RecyclerView mRecyclerView;
     TranslationRecyclerAdapter mAdapter;
 
-    File file;
-
-    int com = 0;
     RequestQueue requestQueue;
     ArrayList<TranslationData> result;
 
@@ -94,18 +91,16 @@ public class DrawerActivity extends AppCompatActivity
         String path = Environment.getExternalStorageDirectory() + File.separator + "PersonalOCR" + File.separator;
         imageutils.createImage(file, filename, path, false);
 
-        Bitmap imageBitmap = file;
+        if (file != null) {
 
-        if (imageBitmap != null) {
+            ((ImageView) findViewById(R.id.img)).setImageBitmap(file);
 
-            ((ImageView) findViewById(R.id.img)).setImageBitmap(imageBitmap);
-
-            FirebaseVisionTextDetector textRecognizer = FirebaseVision.getInstance().getVisionTextDetector();
-            FirebaseVisionImage fn = FirebaseVisionImage.fromBitmap(imageBitmap);
-            Task<FirebaseVisionText> fvresult = textRecognizer.detectInImage(fn).addOnSuccessListener(new OnSuccessListener<FirebaseVisionText>() {
+            FirebaseVisionTextRecognizer textRecognizer = FirebaseVision.getInstance().getCloudTextRecognizer();
+            FirebaseVisionImage fn = FirebaseVisionImage.fromBitmap(file);
+            textRecognizer.processImage(fn).addOnSuccessListener(new OnSuccessListener<FirebaseVisionText>() {
                 @Override
                 public void onSuccess(FirebaseVisionText results) {
-                    List<FirebaseVisionText.Block> block = results.getBlocks();
+                    List<FirebaseVisionText.TextBlock> block = results.getTextBlocks();
 
                     Log.e("Request Recieved", "YES");
                     SortText sortText = new SortText();
@@ -123,18 +118,18 @@ public class DrawerActivity extends AppCompatActivity
                     findViewById(R.id.resultLayout).setVisibility(View.VISIBLE);
                     findViewById(R.id.imgselect).setVisibility(GONE);
                     for (aditya.rupal.translate.orcandtext.data.Text t : sortText.getAllText()) {
-                        String str = "";
+                        StringBuilder str = new StringBuilder();
                         for (FirebaseVisionText.Line e : t.getText()) {
-                            str += e.getText() + " ";
+                            str.append(e.getText()).append(" ");
                         }
-                        TranslationData td = new TranslationData(str, "");
+                        TranslationData td = new TranslationData(str.toString(), "");
                         result.add(td);
 
                         JsonObjectRequest request = null;
                         try {
-                            String origlink = String.format("https://script.google.com/macros/s/AKfycbwb8tHeko9lBq3l7xkm8Aa0qQVtXg9FJGH7tSDrDtyLDE98zAY/exec?q=%s&target=%s&id=%s", URLEncoder.encode(str, "UTF-8"), languages.get(spinner.getSelectedItem().toString()), result.indexOf(td));
+                            String origLink = String.format("https://script.google.com/macros/s/AKfycbwb8tHeko9lBq3l7xkm8Aa0qQVtXg9FJGH7tSDrDtyLDE98zAY/exec?q=%s&target=%s&id=%s", URLEncoder.encode(str.toString(), "UTF-8"), languages.get(spinner.getSelectedItem().toString()), result.indexOf(td));
 
-                            request = new JsonObjectRequest(Request.Method.GET, origlink, null, new Response.Listener<JSONObject>() {
+                            request = new JsonObjectRequest(Request.Method.GET, origLink, null, new Response.Listener<JSONObject>() {
                                 @Override
                                 public void onResponse(JSONObject response) {
                                     try {
@@ -154,6 +149,7 @@ public class DrawerActivity extends AppCompatActivity
                         } catch (UnsupportedEncodingException e) {
                             e.printStackTrace();
                         }
+                        assert request != null;
                         requestQueue.add(request);
                     }
                     mAdapter.notifyDataSetChanged();
@@ -197,7 +193,7 @@ public class DrawerActivity extends AppCompatActivity
         mToolbar.setNavigationIcon(R.drawable.ic_toolbar_navigation_4);
         setSupportActionBar(mToolbar);
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
@@ -260,6 +256,7 @@ public class DrawerActivity extends AppCompatActivity
                 } catch (UnsupportedEncodingException e) {
                     e.printStackTrace();
                 }
+                assert request != null;
                 requestQueue.add(request);
             }
         });
@@ -434,7 +431,6 @@ public class DrawerActivity extends AppCompatActivity
         return super.onOptionsItemSelected(item);
     }
 
-    @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
